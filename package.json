@@ -2,7 +2,7 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "./src/test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^23.5.2"
+  },
+  "pkg": {
+    "scripts": ["node_modules/**/*.js"],
+    "assets": ["node_modules/puppeteer-core/**"]
   }
 }
