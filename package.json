@@ -4,16 +4,23 @@
   "description": "",
   "main": "./src/test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mpacchettamelo": "pkg ./src/test.js --targets win --public",
+    "converti": "esbuild src/test.js --outfile=dist/test.cjs --format=cjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "p-limit": "^2.3.0",
     "puppeteer": "^23.5.2"
   },
   "pkg": {
-    "scripts": ["node_modules/**/*.js"],
-    "assets": ["node_modules/puppeteer-core/**"]
+    "scripts": [
+      "node_modules/**/*.js"
+    ],
+    "assets": [
+      "node_modules/puppeteer-core/**"
+    ]
   }
 }
